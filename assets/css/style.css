@@ -2,8 +2,78 @@
     box-sizing: border-box;
 }
 
+
+:root {
+    --charcoal: #40444F;
+    --eggshell: #FAF3DD;
+    --moonstone: #6BBBC7;
+    --jungle-green: #06A77D;
+    --rose: #E87EA1;
+    --light-yellow: #FDFCDC;
+    --light-orange: #FED9B7;
+    --lighter-yellow: #FEF9E7;
+    --primary-dark: var(--charcoal);
+    --primary-dark-translucent: rgba(64, 68, 79, 0.9);
+    --primary-light: var(--lighter-yellow);
+    --light-accent: var(--light-orange);
+    --accent: var(--moonstone);                                 
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: rebeccapurple;
+    background: var(--primary-light);
+}
+
+.navbar {
+    background: var(--primary-light);
+}
+
+
+.hero-section {
+    background-image: url(../images/blissful-shiba.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+}
+
+.hero-content-container {
+    background: var(--primary-dark-translucent);
+    color: var(--primary-light);
+}
+
+.hero-content-container a {
+    background: var(--accent);
+    color: var(--primary-light);
+}
+
+.hero-content-container a:hover {
+    background: var(--jungle-green);
+}
+
+
+@media (min-width: 768px) {
+    .hero-content-container {
+        background: none;
+        color: var(--primary-dark);
+    }
+}
+
+
+.card {
+    --bs-card-bg: var(--light-accent);
+}
+
+.accordion-button {
+    background: var(--light-accent);
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--moonstone);
+}
+
+.accordion-item {
+    background: var(--light-accent);
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
