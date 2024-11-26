@@ -16,8 +16,13 @@
     --primary-dark-translucent: rgba(64, 68, 79, 0.9);
     --primary-light: var(--lighter-yellow);
     --light-accent: var(--light-orange);
-    --accent: var(--moonstone);                                 
-}
+    --accent: var(--moonstone);
+    /* --bs-font-sans-serif: sans-serif;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+}                              
+
+
+
 
 body {
     margin: 0;
@@ -61,7 +66,10 @@ body {
 
 
 .card {
-    --bs-card-bg: var(--light-accent);
+    /* --bs-card-bg: var(--light-accent); */
+    background-color: var(--light-accent);
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
 .accordion-button {
@@ -76,4 +84,13 @@ body {
     background: var(--light-accent);
     color: var(--primary-dark);
     border-color: var(--primary-dark);
+}
+
+#tips {
+    background: var(--accent);
+}
+
+.vertical-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
