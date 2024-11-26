@@ -12,7 +12,7 @@
 
 <body>
     <!-- Nav bar  -->
-    <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mental Health Matters</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +38,9 @@
     <section class="hero-section d-flex align-items-center" style="height: 100vh;">
         <div class="container">
             <div class="row">
-                <div class="col-10 col-md-6 col-xl-4 hero-content-container pt-2 pb-2">
-                    <h1 class="display-5">Take the First Step Towards Better Mental Health</h1>
-                    <p class="lead">Discover helpful information and tools to support your well-being.</p>
+                <div class="col-10 col-md-6 col-xl-4 hero-content-container">
+                    <h1>Take the First Step Towards Better Mental Health</h1>
+                    <p>Discover helpful information and tools to support your well-being.</p>
                     <a href="#understanding-mental-health" class="btn btn-primary">Start Here</a>
                 </div>
             </div>
@@ -52,8 +52,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8 text-center">
-                    <h2 class="mb-4">Understanding Mental Health</h2>
-                    <p class="mb-5">Mental health is an essential part of our overall well-being. It encompasses our emotional, psychological, and social health, affecting how we think, feel, and act. Good mental health helps us cope with the stresses of life, build meaningful relationships, and make sound decisions. Just as we care for our physical health, taking steps to nurture our mental health is vital. Understanding the signs of common mental health challenges is the first step toward seeking help and improving well-being.</p>
+                    <h2>Understanding Mental Health</h2>
+                    <p>Mental health is an essential part of our overall well-being. It encompasses our emotional, psychological, and social health, affecting how we think, feel, and act. Good mental health helps us cope with the stresses of life, build meaningful relationships, and make sound decisions. Just as we care for our physical health, taking steps to nurture our mental health is vital. Understanding the signs of common mental health challenges is the first step toward seeking help and improving well-being.</p>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -154,7 +154,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
-                    <h2 class="mb-5">Tips for staying mentally healthy</h2>
+                    <h2>Tips for staying mentally healthy</h2>
                 </div>
             </div>
             <div class="row">
@@ -211,68 +211,83 @@
     </section>
 
     <!-- Inspiration Section -->
-    <section id="inspiration" class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h2>Inspiration</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8">
-                    <div id="inspirationCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="text-center">
-                                    <blockquote class="blockquote">
-                                        <p>"You don’t have to control your thoughts. You just have to stop letting them control you."</p>
-                                    </blockquote>
-                                    <figcaption class="blockquote-footer">
-                                        Dan Millman
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="text-center">
-                                    <blockquote class="blockquote">
-                                        <p>"What lies behind us and what lies before us are tiny matters compared to what lies within us."</p>
-                                    </blockquote>
-                                    <figcaption class="blockquote-footer">
-                                        Ralph Waldo Emerson
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="text-center">
-                                    <blockquote class="blockquote">
-                                        <p>"Healing takes time, and asking for help is a courageous step."</p>
-                                    </blockquote>
-                                    <figcaption class="blockquote-footer">
-                                        Mariska Hargitay
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="text-center">
-                                    <blockquote class="blockquote">
-                                        <p>"Happiness can be found even in the darkest of times, if one only remembers to turn on the light."</p>
-                                    </blockquote>
-                                    <figcaption class="blockquote-footer">
-                                        Albus Dumbledore
-                                    </figcaption>
-                                </figure>
+    <section id="inspiration">
+        <div class="container-fluid p-0">
+            <div id="inspirationCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="slide-1">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-md-8">
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote">
+                                            <p>"You don’t have to control your thoughts. You just have to stop letting them control you."</p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                            Dan Millman
+                                        </figcaption>
+                                    </figure>
+                                </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#inspirationCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#inspirationCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                    </div>
+                    <div class="carousel-item" id="slide-2" style="background-color: #E87EA1;">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-md-8">
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote">
+                                            <p>"What lies behind us and what lies before us are tiny matters compared to what lies within us."</p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                            Ralph Waldo Emerson
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide-3" style="background-color: #06A77D;">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-md-8">
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote">
+                                            <p>"Healing takes time, and asking for help is a courageous step."</p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                            Mariska Hargitay
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide-4" style="background-color: #18c0f3;">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-md-8">
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote">
+                                            <p>"Happiness can be found even in the darkest of times, if one only remembers to turn on the light."</p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                            Albus Dumbledore
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#inspirationCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#inspirationCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>

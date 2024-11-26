@@ -45,6 +45,8 @@ body {
 .hero-content-container {
     background: var(--primary-dark-translucent);
     color: var(--primary-light);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .hero-content-container a {
@@ -93,4 +95,60 @@ body {
 .vertical-padding {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+.carousel-item {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+@media(min-width: 992px) {
+    .carousel-item {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+
+#slide-1 {
+    background: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('../images/slide-4-min.webp');
+    background-position: 50% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slide-2 {
+    background: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('../images/slide-2-min.webp');
+    background-position: 50% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slide-3 {
+    background: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('../images/slide-3-min.webp');
+    background-position: 50% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slide-4 {
+    background: 
+        linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+        url('../images/slide-6-min.webp');
+    background-position: 50% 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blockquote {
+    color: var(--primary-light);
+}
+
+.blockquote-footer {
+    color: var(--light-accent);
 }
