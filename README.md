@@ -15,7 +15,7 @@ The site has been designed to be calming, unobtrusive, and to present informatio
 
 I didn't make use of any wireframing software, instead I simply used pen and paper.
 
-Include wireframe images below. 
+![wireframe](https://github.com/user-attachments/assets/94389fb3-a59d-4f12-844d-e19546de97fe)
 
 During the initial design process I didn't have a particular colour scheme in mind, and I iterated over a few before finally settling on the one shown below:
 
@@ -61,7 +61,14 @@ Towards the bottom of the page there are a number of quotes related to mental he
 
 
 # Testing
+I primarily relied on manual testing for this site, testing continuously as I built it. 
+The Lighthouse assessment scores are included below.
+![lighthouse-desktop](https://github.com/user-attachments/assets/c6a84ab7-0eb3-4c65-98b6-17196100d777)
+![lighthouse-mobile](https://github.com/user-attachments/assets/4c0b4f01-bbe6-43a2-a2ce-11b647dd3f9a)
 
+I also ran the relevant files through HTML and CSS validators, all of which passed, as shown below.
+![html-validation](https://github.com/user-attachments/assets/fbc53baf-fdf3-49b6-957e-259c6f57f0b7)
+![css-validation](https://github.com/user-attachments/assets/d75c934e-2197-46fe-894d-0b2329c673b5)
 
 
 
@@ -75,9 +82,27 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 
 # Citations
+I used [Pexels](https://pexels.com) for all imagery on the site. I then used [Image Resizer](https://imageresizer.com/image-compressor/editor) and [Tiny IMG](https://tiny-img.com/webp/) to compress images and convert them to Webp. 
+I also used AI to help produce the copy for the site as well as the markup. Specifically, I used a combination of Copilot and ChatGPT. I made sure to thank it afterwards.
+
+![hedging-bets](https://github.com/user-attachments/assets/77dfe014-5600-4323-9286-a3329a8a62ac)
+
+(this helps to ensure my survival after the machine uprising)
 
 
+# Technologies used
+- HTML5
+- CSS
+- Bootstrap
+- Copilot
+- ChatGPT
+- VSCode
+- Github
+- Gitpod
+- Bic Bu3 Grip 1.0 Black Retractable Ballpoint Pens
 
+# Reflection on AI use
+The main areas in which AI was useful were in content generation, and producing the markup for the site - particularly the parts where I was just using Bootstrap components more or less as-is. The further I strayed from the default Bootstrap components, the worse AI was at accurately producing something that met the requirements, and so I generally made changes of this nature myself. AI didn't really contribute in any meaningful way to finding bugs or improving UX or performance in this project. 
 
 
 # Future Features
