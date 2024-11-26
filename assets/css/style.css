@@ -109,6 +109,28 @@ body {
     }
 }
 
+
+
+
+.card-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card i {
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
 #slide-1 {
     background: 
         linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
