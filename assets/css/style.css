@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poiret+One&display=swap');
+
+/*
+'Poiret One', sans-serif;
+'Lexend', sans-serif;
+'MonteCarlo', cursive;
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +15,9 @@
     --charcoal: #40444F;
     --eggshell: #FAF3DD;
     --moonstone: #6BBBC7;
-    --jungle-green: #06A77D;
+    /* --jungle-green: #06A77D; */
+    --jungle-green: #067F5E;
+    --jungle-green-dark: #04644b;
     --rose: #E87EA1;
     --light-yellow: #FDFCDC;
     --light-orange: #FED9B7;
@@ -17,23 +27,48 @@
     --primary-light: var(--lighter-yellow);
     --light-accent: var(--light-orange);
     --accent: var(--moonstone);
-    /* --bs-font-sans-serif: sans-serif;
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+    --button: var(--jungle-green);
+    --button-hover: var(--jungle-green-dark);
+    --heading-font: 'Poiret One', sans-serif;
+    --body-font: 'Lexend', sans-serif;
 }                              
 
 
+.heading {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
 
 body {
     margin: 0;
     padding: 0;
     background: var(--primary-light);
+    font-family: var(--body-font);
+    font-weight: 400;
 }
+
+.vertical-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+/*********
+  Navbar
+*********/
 
 .navbar {
     background: var(--primary-light);
 }
 
+
+
+/***************
+  Hero section
+***************/
 
 .hero-section {
     background-image: url(../images/blissful-shiba.webp);
@@ -50,13 +85,18 @@ body {
 }
 
 .hero-content-container a {
-    background: var(--accent);
-    color: var(--primary-light);
+    background: var(--button);
+    color: #ffffff;
+    font-weight: 600;
+    border-color: var(--button);
 }
 
 .hero-content-container a:hover {
-    background: var(--jungle-green);
+    background: var(--button-hover);
+    border-color: var(--button-hover);
 }
+
+
 
 
 @media (min-width: 768px) {
@@ -67,12 +107,9 @@ body {
 }
 
 
-.card {
-    /* --bs-card-bg: var(--light-accent); */
-    background-color: var(--light-accent);
-    color: var(--primary-dark);
-    border-color: var(--primary-dark);
-}
+/**************************************
+  Understanding mental health section
+**************************************/
 
 .accordion-button {
     background: var(--light-accent);
@@ -88,29 +125,27 @@ body {
     border-color: var(--primary-dark);
 }
 
+.accordion button {
+    font-weight: 600;
+}
+
+/***************
+  Tips section
+***************/
+
 #tips {
     background: var(--accent);
 }
 
-.vertical-padding {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+.card {
+    background-color: var(--light-accent);
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
-.carousel-item {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+.card h5 {
+    font-weight: 600;
 }
-
-@media(min-width: 992px) {
-    .carousel-item {
-        padding-top: 10rem;
-        padding-bottom: 10rem;
-    }
-}
-
-
-
 
 .card-icon-container {
     display: flex;
@@ -126,9 +161,22 @@ body {
 
 
 
+/**********************
+  Inspiration section
+**********************/
 
+.carousel-item {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    height: 380px;
+}
 
-
+@media(min-width: 992px) {
+    .carousel-item {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
 
 
 #slide-1 {
@@ -173,8 +221,15 @@ body {
 
 .blockquote-footer {
     color: var(--light-accent);
+    font-weight: 600;
 }
 
+
+
+
+/*********
+  Footer
+*********/
 
 footer {
     background: var(--primary-dark);
