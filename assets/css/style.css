@@ -152,3 +152,14 @@ body {
 .blockquote-footer {
     color: var(--light-accent);
 }
+
+
+footer {
+    background: var(--primary-dark);
+    color: var(--primary-light);
+    padding: 2rem 0;
+}
+
+footer p {
+    margin: 0;
+}
