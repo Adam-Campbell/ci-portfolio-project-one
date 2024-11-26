@@ -185,6 +185,25 @@ body {
 
 
 
+/************************
+  Questionnaire section
+************************/
+
+#phq9 {
+    background-color: var(--primary-light);
+    padding: 2rem 0;
+}
+
+.question-container {
+    margin-bottom: 2rem;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 
 

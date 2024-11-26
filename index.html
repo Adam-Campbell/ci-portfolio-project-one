@@ -228,6 +228,49 @@
         </div>
     </section>
 
+    <!-- PHQ-9 Section -->
+    <section id="phq9" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h2 class="heading">PHQ-9 Questionnaire</h2>
+                    <p>Please answer the following questions based on how you have felt over the past two weeks.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <form id="phq9-form">
+                        <div class="question-container">
+                            <div class="question" id="question-1">
+                                <h5>1. Little interest or pleasure in doing things?</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question1" id="question1-option0" value="0">
+                                    <label class="form-check-label" for="question1-option0">Not at all</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question1" id="question1-option1" value="1">
+                                    <label class="form-check-label" for="question1-option1">Several days</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question1" id="question1-option2" value="2">
+                                    <label class="form-check-label" for="question1-option2">More than half the days</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question1" id="question1-option3" value="3">
+                                    <label class="form-check-label" for="question1-option3">Nearly every day</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navigation-buttons mt-4">
+                            <button type="button" class="btn btn-secondary" id="prev-button" disabled>Previous</button>
+                            <button type="button" class="btn btn-primary" id="next-button">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Inspiration Section -->
     <div id="inspiration">
         <div class="container-fluid p-0">
@@ -325,6 +368,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b884e54da6.js" crossorigin="anonymous"></script>
+    <script src="assets/js/questionnaire.js"></script>
 </body>
 
 </html>
