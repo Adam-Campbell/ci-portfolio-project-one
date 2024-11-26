@@ -1,37 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poiret+One&display=swap');
 
-/*
-'Poiret One', sans-serif;
-'Lexend', sans-serif;
-'MonteCarlo', cursive;
-*/
+
+
+
+
+:root {
+    /* Color variables */
+    --charcoal: #40444F;
+    --moonstone: #6BBBC7;
+    --jungle-green: #067F5E;
+    --jungle-green-dark: #04644b;
+    --light-orange: #FED9B7;
+    --light-yellow: #FEF9E7;
+    /* Role oriented aliases */
+    --primary-dark: var(--charcoal);
+    --primary-dark-translucent: rgba(64, 68, 79, 0.9);
+    --primary-light: var(--light-yellow);
+    --light-accent: var(--light-orange);
+    --accent: var(--moonstone);
+    --button: var(--jungle-green);
+    --button-hover: var(--jungle-green-dark);
+    /* Font variables */
+    --heading-font: 'Poiret One', sans-serif;
+    --body-font: 'Lexend', sans-serif;
+}                              
+
 
 * {
     box-sizing: border-box;
 }
 
-
-:root {
-    --charcoal: #40444F;
-    --eggshell: #FAF3DD;
-    --moonstone: #6BBBC7;
-    /* --jungle-green: #06A77D; */
-    --jungle-green: #067F5E;
-    --jungle-green-dark: #04644b;
-    --rose: #E87EA1;
-    --light-yellow: #FDFCDC;
-    --light-orange: #FED9B7;
-    --lighter-yellow: #FEF9E7;
-    --primary-dark: var(--charcoal);
-    --primary-dark-translucent: rgba(64, 68, 79, 0.9);
-    --primary-light: var(--lighter-yellow);
-    --light-accent: var(--light-orange);
-    --accent: var(--moonstone);
-    --button: var(--jungle-green);
-    --button-hover: var(--jungle-green-dark);
-    --heading-font: 'Poiret One', sans-serif;
-    --body-font: 'Lexend', sans-serif;
-}                              
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-light);
+    font-family: var(--body-font);
+    font-weight: 400;
+}
 
 
 .heading {
@@ -42,18 +47,14 @@
 }
 
 
-body {
-    margin: 0;
-    padding: 0;
-    background: var(--primary-light);
-    font-family: var(--body-font);
-    font-weight: 400;
-}
-
 .vertical-padding {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
+
+
+
+
 
 
 /*********
@@ -65,6 +66,9 @@ body {
     border-bottom: solid 2px var(--light-accent);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+
 
 
 
@@ -99,14 +103,16 @@ body {
 }
 
 
-
-
 @media (min-width: 768px) {
     .hero-content-container {
         background: none;
         color: var(--primary-dark);
     }
 }
+
+
+
+
 
 
 /**************************************
@@ -118,7 +124,7 @@ body {
 }
 
 .accordion-button:not(.collapsed) {
-    background: var(--moonstone);
+    background: var(--accent);
 }
 
 .accordion-item {
@@ -130,6 +136,12 @@ body {
 .accordion button {
     font-weight: 600;
 }
+
+
+
+
+
+
 
 /***************
   Tips section
@@ -163,6 +175,9 @@ body {
 
 
 
+
+
+
 /**********************
   Inspiration section
 **********************/
@@ -179,7 +194,6 @@ body {
         padding-bottom: 10rem;
     }
 }
-
 
 #slide-1 {
     background: 
@@ -229,6 +243,8 @@ body {
 
 
 
+
+
 /*********
   Footer
 *********/
@@ -242,3 +258,4 @@ footer {
 footer p {
     margin: 0;
 }
+
