@@ -62,6 +62,8 @@ body {
 
 .navbar {
     background: var(--primary-light);
+    border-bottom: solid 2px var(--light-accent);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
 }
 
 
