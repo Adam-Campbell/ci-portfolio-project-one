@@ -16,8 +16,17 @@ let currentQuestionIndex = 0;
 let scores = Array(questions.length).fill(null); // Initialize scores array with null values
 
 const questionContainer = document.querySelector('.question-container');
-const prevButton = document.getElementById('prev-button');
-const nextButton = document.getElementById('next-button');
+const resultsContainer = document.querySelector('.results-container');
+const introView = document.getElementById('intro-view');
+const questionView = document.getElementById('question-view');
+const resultsView = document.getElementById('results-view');
+const beginButton = document.getElementById('begin-button');
+
+beginButton.addEventListener('click', function () {
+    introView.style.display = 'none';
+    questionView.style.display = 'flex'; // Set display to flex
+    showQuestion(currentQuestionIndex);
+});
 
 function showQuestion(index) {
     const score = scores[index];
@@ -41,6 +50,10 @@ function showQuestion(index) {
                 <label class="form-check-label" for="question${index + 1}-option3">Nearly every day</label>
             </div>
         </div>
+        <div class="navigation-buttons mt-4">
+            <button type="button" class="btn btn-secondary" id="prev-button" ${index === 0 ? 'disabled' : ''}>Previous</button>
+            <button type="button" class="btn btn-primary" id="next-button">${index === questions.length - 1 ? 'Submit' : 'Next'}</button>
+        </div>
     `;
     questionContainer.innerHTML = questionHTML;
 
@@ -48,35 +61,66 @@ function showQuestion(index) {
     document.querySelectorAll(`input[name="question${index + 1}"]`).forEach(input => {
         input.addEventListener('change', function () {
             scores[index] = parseInt(this.value);
+            updateButtons(); // Update buttons after changing the score
         });
     });
+
+    // Add event listeners to navigation buttons
+    document.getElementById('prev-button').addEventListener('click', function () {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            showQuestion(currentQuestionIndex);
+            updateButtons();
+        }
+    });
+
+    document.getElementById('next-button').addEventListener('click', function () {
+        if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            showQuestion(currentQuestionIndex);
+            updateButtons();
+        } else {
+            // Show results
+            showResults();
+        }
+    });
+
+    updateButtons(); // Initial button state update
 }
 
 function updateButtons() {
-    prevButton.disabled = currentQuestionIndex === 0;
-    nextButton.textContent = currentQuestionIndex === questions.length - 1 ? 'Submit' : 'Next';
+    const nextButton = document.getElementById('next-button');
+    if (currentQuestionIndex === questions.length - 1) {
+        nextButton.disabled = scores.includes(null); // Disable submit button if any scores are null
+    } else {
+        nextButton.disabled = false;
+    }
 }
 
-prevButton.addEventListener('click', function () {
-    if (currentQuestionIndex > 0) {
-        currentQuestionIndex--;
-        showQuestion(currentQuestionIndex);
-        updateButtons();
-    }
-});
+function showResults() {
+    const totalScore = scores.reduce((acc, score) => acc + (score !== null ? score : 0), 0);
+    const lastQuestionScore = scores[scores.length - 1];
 
-nextButton.addEventListener('click', function () {
-    if (currentQuestionIndex < questions.length - 1) {
-        currentQuestionIndex++;
-        showQuestion(currentQuestionIndex);
-        updateButtons();
-    } else {
-        // Handle form submission
-        alert('Form submitted!');
-        console.log('Scores:', scores);
-    }
-});
+    const resultsHTML = `
+        <div class="results">
+            <h5>Your Total Score: ${totalScore}</h5>
+            <p>Your score for the last question was ${lastQuestionScore === 0 ? '0' : lastQuestionScore}.</p>
+            <button type="button" class="btn btn-primary" id="reset-button">Reset Questionnaire</button>
+        </div>
+    `;
+    resultsContainer.innerHTML = resultsHTML;
 
-// Initialize the first question
-showQuestion(currentQuestionIndex);
-updateButtons();
+    // Hide question view and show results view
+    questionView.style.display = 'none';
+    resultsView.style.display = 'flex';
+
+    // Add event listener to reset button
+    document.getElementById('reset-button').addEventListener('click', resetQuestionnaire);
+}
+
+function resetQuestionnaire() {
+    scores.fill(null);
+    currentQuestionIndex = 0;
+    resultsView.style.display = 'none';
+    introView.style.display = 'block';
+}
