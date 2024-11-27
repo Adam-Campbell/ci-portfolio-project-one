@@ -53,6 +53,12 @@ I utilised Bootstraps Card component together with its Grid System and FontAweso
 ![tips](https://github.com/user-attachments/assets/0a974a3f-205f-4368-8473-e6bafbd743be)
 
 
+## Questionnaire
+I added a questionnaire which combines the PHQ-9 and GAD-7 self-assessment tools for depression and anxiety. It uses Bootstrap form elements for the markup, and I used to Copilot to write the underlying JavaScript under my instruction.
+
+![questionnaire-screenshot](https://github.com/user-attachments/assets/60286e31-2e4f-4695-9b68-9055870f0f37)
+
+
 ## Inspirational quotes
 
 Towards the bottom of the page there are a number of quotes related to mental health. I chose to use Bootstraps Carousel component to display these, as they aren't crucial information for the site, and the use of a Carousel allows readers who aren't intested in them to easily ignore them, whilst those that are can click through the various slides.
@@ -63,10 +69,13 @@ Towards the bottom of the page there are a number of quotes related to mental he
 # Testing
 I primarily relied on manual testing for this site, testing continuously as I built it. 
 The Lighthouse assessment scores are included below.
-![lighthouse-desktop](https://github.com/user-attachments/assets/c6a84ab7-0eb3-4c65-98b6-17196100d777)
-![lighthouse-mobile](https://github.com/user-attachments/assets/4c0b4f01-bbe6-43a2-a2ce-11b647dd3f9a)
+
+![lighthouse-desktop-new](https://github.com/user-attachments/assets/54f262f3-c9bf-4631-a2ba-97224a972aa9)
+![lighthouse-mobile-new](https://github.com/user-attachments/assets/8dd77249-feaf-44c6-b7d6-693e120f5fdd)
+
 
 I also ran the relevant files through HTML and CSS validators, all of which passed, as shown below.
+
 ![html-validation](https://github.com/user-attachments/assets/fbc53baf-fdf3-49b6-957e-259c6f57f0b7)
 ![css-validation](https://github.com/user-attachments/assets/d75c934e-2197-46fe-894d-0b2329c673b5)
 
@@ -107,11 +116,20 @@ The main areas in which AI was useful were in content generation, and producing 
 
 # Future Features
 
+Some of the styling for the questionnaire is yet to be completed.
 
 
 
 # Known bugs
 
+There is some strange behaviour with some of the bootstrap buttons (or links styled as buttons) where I have overriden the colour. On click, they briefly go back to the bootstrap primary colour, this seems to be occuring due to an event handler attached to them. Given time, I would just style the buttons myself from scratch rather than use that part of Bootstrap, thus avoiding the issue.
+
+
+# Bonus artwork
+
+![the-pull-request](https://github.com/user-attachments/assets/8907a9d0-02eb-4232-8ee3-780ad1f6c18b)
+
+_The Pull Request_, - Leonardo da Vinci, fresco.
 
 
 
