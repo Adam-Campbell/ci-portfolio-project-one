@@ -1,6 +1,7 @@
 console.log("Hello from questionnaire.js");
 
 const questions = [
+    // PHQ-9 Questions
     "Little interest or pleasure in doing things?",
     "Feeling down, depressed, or hopeless?",
     "Trouble falling or staying asleep, or sleeping too much?",
@@ -9,7 +10,15 @@ const questions = [
     "Feeling bad about yourself - or that you are a failure or have let yourself or your family down?",
     "Trouble concentrating on things, such as reading the newspaper or watching television?",
     "Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?",
-    "Thoughts that you would be better off dead, or of hurting yourself in some way?"
+    "Thoughts that you would be better off dead, or of hurting yourself in some way?",
+    // GAD-7 Questions
+    "Feeling nervous, anxious, or on edge?",
+    "Not being able to stop or control worrying?",
+    "Worrying too much about different things?",
+    "Trouble relaxing?",
+    "Being so restless that it is hard to sit still?",
+    "Becoming easily annoyed or irritable?",
+    "Feeling afraid as if something awful might happen?"
 ];
 
 let currentQuestionIndex = 0;
@@ -97,14 +106,50 @@ function updateButtons() {
     }
 }
 
+function getPHQ9ResultMessage(score, sensitiveQuestionScore) {
+    let message = "";
+    if (score < 5) {
+        message = "Your score suggests that you may not be experiencing depression, as determined by the PHQ-9 questionnaire. However, it may still be beneficial to speak with a mental health professional.";
+    } else if (score < 10) {
+        message = "Your score suggests that you may be experiencing mild depression. We recommend speaking with a mental health professional.";
+    } else if (score < 15) {
+        message = "Your score suggests that you may be experiencing moderate depression. We recommend speaking with a mental health professional.";
+    } else if (score < 20) {
+        message = "Your score suggests that you may be experiencing moderately severe depression. We recommend speaking with a mental health professional.";
+    } else {
+        message = "Your score suggests that you may be experiencing severe depression. We recommend speaking with a mental health professional.";
+    }
+    if (sensitiveQuestionScore > 0) {
+        message += " You have also expressed thoughts of self harm. Please contact your GP immediately to discuss this.";
+    }
+    return message;
+}
+
+function getGAD7ResultMessage(score) {
+    let message = "";
+    if (score < 5) {
+        message = "Your score suggests that you may not be experiencing anxiety, as determined by the GAD-7 questionnaire. However, it may still be beneficial to speak with a mental health professional.";
+    } else if (score < 10) {
+        message = "Your score suggests that you may be experiencing mild anxiety. We recommend speaking with a mental health professional.";
+    } else if (score < 15) {
+        message = "Your score suggests that you may be experiencing moderate anxiety. We recommend speaking with a mental health professional.";
+    } else {
+        message = "Your score suggests that you may be experiencing severe anxiety. We recommend speaking with a mental health professional.";
+    }
+    return message;
+}
+
 function showResults() {
-    const totalScore = scores.reduce((acc, score) => acc + (score !== null ? score : 0), 0);
-    const lastQuestionScore = scores[scores.length - 1];
+    const totalScorePHQ9 = scores.slice(0, 9).reduce((acc, score) => acc + (score !== null ? score : 0), 0);
+    const totalScoreGAD7 = scores.slice(9).reduce((acc, score) => acc + (score !== null ? score : 0), 0);
+    const selfHarmScore = scores[8];
 
     const resultsHTML = `
         <div class="results">
-            <h5>Your Total Score: ${totalScore}</h5>
-            <p>Your score for the last question was ${lastQuestionScore === 0 ? '0' : lastQuestionScore}.</p>
+            <h5>Your Total PHQ-9 Score: ${totalScorePHQ9}</h5>
+            <p>${getPHQ9ResultMessage(totalScorePHQ9, selfHarmScore)}</p>
+            <h5>Your Total GAD-7 Score: ${totalScoreGAD7}</h5>
+            <p>${getGAD7ResultMessage(totalScoreGAD7)}</p>
             <button type="button" class="btn btn-primary" id="reset-button">Reset Questionnaire</button>
         </div>
     `;
@@ -122,5 +167,5 @@ function resetQuestionnaire() {
     scores.fill(null);
     currentQuestionIndex = 0;
     resultsView.style.display = 'none';
-    introView.style.display = 'block';
+    introView.style.display = 'flex';
 }
